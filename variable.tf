@@ -1,24 +1,24 @@
 #===================Google_storage_bucket=====================
 
-variable "bucket-name" {
+variable "website-bucket-name" {
     type        = string
     default     = "petrosyangeorge.com"
     description = "The name of the Google storage bucket resources"
 }
 
-variable "bucket-storage-class" {
+variable "website-bucket-storage-class" {
     type        = string
     default     = "NEARLINE"
     description = "The name of the Bucket storage class"
 }
 
-variable "bucket-location" {
+variable "website-bucket-location" {
     type        = string
     default     = "US-CENTRAL1"
     description = "The name of the Bucket location"
 }
 
-variable "bucket-level-access" {
+variable "website-bucket-level-access" {
     type        = bool
     default     = true
     description = "The bucket level access"
