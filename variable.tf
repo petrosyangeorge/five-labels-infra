@@ -1,5 +1,4 @@
 #===================Google_storage_bucket=====================
-
 variable "website-bucket-name" {
     type        = string
     default     = "petrosyangeorge.com"
@@ -23,9 +22,33 @@ variable "website-bucket-level-access" {
     default     = true
     description = "The bucket level access"
 }
-#=============================================================
-#===================Google_cloud_run_service==================
 
+#===================Google_storage_admin_bucket=====================
+variable "website-admin-bucket-name" {
+    type        = string
+    default     = "admin.petrosyangeorge.com"
+    description = "The name of the Google storage admin bucket resources"
+}
+
+variable "website-admin-bucket-storage-class" {
+    type        = string
+    default     = "NEARLINE"
+    description = "The name of the admin Bucket storage class"
+}
+
+variable "website-admin-bucket-location" {
+    type        = string
+    default     = "US-CENTRAL1"
+    description = "The name of the admin Bucket location"
+}
+
+variable "website-admin-bucket-level-access" {
+    type        = bool
+    default     = true
+    description = "The admin bucket level access"
+}
+
+#===================Google_cloud_run_service==================
 variable "cloudrun-service-name" {
     type        = string
     default     = "gcp-cloudrun"
@@ -43,7 +66,7 @@ variable "cloudrun-container-port" {
     default     = "80"
     description = "The Container port"
 }
-#==============================================================
+
 #==================Google_sql_database_instance================
 
 variable "db-pg-instance-name" {
@@ -87,4 +110,4 @@ variable "pg-user-password" {
     default     = "sqlname123"
     description = "The password for the default user. If not set, a random one will be generated"
 }
-#==============================================================
+
