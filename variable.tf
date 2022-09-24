@@ -24,25 +24,25 @@ variable "website-bucket-level-access" {
 }
 
 #===================Google_storage_admin_bucket=====================
-variable "website-admin-bucket-name" {
+variable "admin-bucket-name" {
     type        = string
     default     = "admin.petrosyangeorge.com"
     description = "The name of the Google storage admin bucket resources"
 }
 
-variable "website-admin-bucket-storage-class" {
+variable "admin-bucket-storage-class" {
     type        = string
     default     = "NEARLINE"
     description = "The name of the admin Bucket storage class"
 }
 
-variable "website-admin-bucket-location" {
+variable "admin-bucket-location" {
     type        = string
     default     = "US-CENTRAL1"
     description = "The name of the admin Bucket location"
 }
 
-variable "website-admin-bucket-level-access" {
+variable "admin-bucket-level-access" {
     type        = bool
     default     = true
     description = "The admin bucket level access"

@@ -6,9 +6,9 @@ resource "google_storage_bucket" "gcp-bucket" {
 }
 
 resource "google_storage_bucket" "gcp-admin-bucket" {
-  name = var.website-admin-bucket-name
-  storage_class = var.website-admin-bucket-storage-class
-  location = var.website-admin-bucket-location
-  uniform_bucket_level_access = var.website-admin-bucket-level-access
+  name = var.admin-bucket-name
+  storage_class = var.admin-bucket-storage-class
+  location = var.admin-bucket-location
+  uniform_bucket_level_access = var.admin-bucket-level-access
 }
 
