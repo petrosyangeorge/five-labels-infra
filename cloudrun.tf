@@ -1,14 +1,16 @@
 resource "google_cloud_run_service" "gcp-cloudrun" {
-  ###$name = "run-app-from-tf"
   name = var.cloudrun-service-name
-  ###$location = "us-central1"
   location = var.cloudrun-service-location
   
   template {
+        metadata {
+      annotations = {
+        "run.googleapis.com/execution-environment" = "gen2"
+      }
+    }  
     spec {
       containers {
           ports {
-            ###$container_port = 80
             container_port = var.cloudrun-container-port
           }
         ###$image = "gcr.io/google-samples/hello-app:1.0"

@@ -23,6 +23,18 @@ variable "website-bucket-level-access" {
     description = "The bucket level access"
 }
 
+variable "website-bucket-role" {
+    type        = string
+    default     = "roles/storage.objectViewer"
+    description = "The name of the Bucket role"
+}
+
+variable "website-bucket-member" {
+    type        = string
+    default     = "allUsers"
+    description = "The name of the Bucket member"
+}
+
 #===================Google_storage_admin_bucket=====================
 variable "website-admin-bucket-name" {
     type        = string
@@ -48,6 +60,17 @@ variable "website-admin-bucket-level-access" {
     description = "The admin bucket level access"
 }
 
+variable "website-admin-bucket-role" {
+    type        = string
+    default     = "roles/storage.objectViewer"
+    description = "The name of the admin Bucket role"
+}
+
+variable "website-bucket-member" {
+    type        = string
+    default     = "allUsers"
+    description = "The name of the admin Bucket mamber"
+}
 #===================Google_cloud_run_service==================
 variable "cloudrun-service-name" {
     type        = string
@@ -101,7 +124,7 @@ variable "db-pg-instance-tier" {
 
 variable "pg-user-name" {
     type        = string
-    default     = "sqlname"
+    default     = "sqlnamterre"
     description = "The name of the default user. If not set, a random one will be generated"
 }
 
