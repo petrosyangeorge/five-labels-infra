@@ -12,7 +12,7 @@ resource "google_storage_bucket" "gcp-bucket" {
 }
 
 
-		resource "google_storage_bucket_iam_member" "public_access" {
+resource "google_storage_bucket_iam_member" "public_access" {
   bucket = google_storage_bucket.gcp-bucket.name
   role = "roles/storage.objectViewer"
   member = "allUsers"
@@ -36,7 +36,7 @@ resource "google_storage_bucket" "gcp-admin-bucket" {
 }
 
 
-		resource "google_storage_bucket_iam_member" "admin_public_access" {
+resource "google_storage_bucket_iam_member" "admin_public_access" {
   bucket = google_storage_bucket.gcp-admin-bucket.name
   role = "roles/storage.objectViewer"
   member = "allUsers"
