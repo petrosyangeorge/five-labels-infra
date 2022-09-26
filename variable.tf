@@ -66,7 +66,7 @@ variable "website-admin-bucket-role" {
     description = "The name of the admin Bucket role"
 }
 
-variable "website-bucket-member" {
+variable "website-admin-bucket-member" {
     type        = string
     default     = "allUsers"
     description = "The name of the admin Bucket mamber"
