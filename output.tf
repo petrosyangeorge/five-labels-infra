@@ -2,10 +2,10 @@ output "Bucket-url" {
     value       = google_storage_bucket.gcp-bucket.url
 }
 
-output "Cloud-run-service-url" {
-    value       = google_cloud_run_service.gcp-cloudrun.status[0].url
-    description = "The URL on which the deployed service is available"
-}
+#output "Cloud-run-service-url" {
+#    value       = google_cloud_run_service.gcp-cloudrun.status[0].url
+#    description = "The URL on which the deployed service is available"
+#}
 
 output "Instance_ip_address" {
     value       = google_sql_database_instance.gcp-postgresql.ip_address
