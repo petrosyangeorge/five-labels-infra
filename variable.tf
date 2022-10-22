@@ -142,7 +142,7 @@ variable "pg-authorized-name" {
 
 variable "pg-authorized-ip" {
     type        = string
-    default     = "8.8.8.8/32"
+    default     = "109.75.46.56/32"
     description = "The Connection Authorized networks ip from which must login"
 }
 
