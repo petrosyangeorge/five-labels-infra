@@ -134,3 +134,15 @@ variable "pg-user-password" {
     description = "The password for the default user. If not set, a random one will be generated"
 }
 
+variable "pg-authorized-name" {
+    type        = string
+    default     = "name-example"
+    description = "The Connection Authorized networks name"
+}
+
+variable "pg-authorized-ip" {
+    type        = string
+    default     = "8.8.8.8/32"
+    description = "The Connection Authorized networks ip from which must login"
+}
+

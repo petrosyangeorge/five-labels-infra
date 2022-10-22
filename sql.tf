@@ -15,9 +15,9 @@ resource "google_sql_database_instance" "gcp-postgresql" {
     ip_configuration  {
       authorized_networks {
         ###$name  = "asdfg" 
-        name  = "asdfg" 
+        name  = var.pg-authorized-name
         ###$value = "37.252.89.188/32"
-        value = "37.252.89.188/32"
+        value = var.pg-authorized-ip
       }
     }
   }
